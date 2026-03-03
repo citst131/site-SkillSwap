@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkillSwap</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+<header>
+    <h1>SkillSwap</h1>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/cursos">Cursos</a>
+        <a href="/criar">Criar Curso</a>
+        <a href="/ranking">Ranking</a>
+        <a href="/login">Login</a>
+        <a href="/cadastro">Cadastro</a>
+        <a href="{{ url_for('logout') }}">Logout</a>
+
+    </nav>
+</header>
+
+{% block content %}{% endblock %}
+
+</div>
+
+</body>
+</html>

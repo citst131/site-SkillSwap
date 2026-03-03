@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Cursos Disponíveis</h2>
+
+{% for curso in cursos %}
+<div class="card">
+    <h3>{{ curso[1] }}</h3>
+    <p>{{ curso[2] }}</p>
+    <p><b>Professor:</b> {{ curso[5] }}</p>
+    <p>⭐ {{ "%.1f"|format(curso[6]) }}</p>
+
+    {% if usuario_id %}
+
+        {% if usuario_id == curso[4] %}
+            <p><i>Seu curso</i></p>
+
+        {% elif curso[0] in inscricoes %}
+            {% if curso[3] %}
+                <video width="300" controls>
+                    <source src="/uploads/{{ curso[3] }}">
+                </video>
+            {% endif %}
+
+        {% else %}
+            <a href="/inscrever/{{ curso[0] }}">
+                Inscrever (1 crédito)
+            </a>
+        {% endif %}
+
+        <div class="rating">
+            Avaliar:
+            <a href="/avaliar/{{ curso[0] }}/1">⭐</a>
+            <a href="/avaliar/{{ curso[0] }}/2">⭐⭐</a>
+            <a href="/avaliar/{{ curso[0] }}/3">⭐⭐⭐</a>
+            <a href="/avaliar/{{ curso[0] }}/4">⭐⭐⭐⭐</a>
+            <a href="/avaliar/{{ curso[0] }}/5">⭐⭐⭐⭐⭐</a>
+        </div>
+
+    {% else %}
+        <p>Faça login para interagir.</p>
+    {% endif %}
+
+</div>
+{% endfor %}
+
+{% endblock %}

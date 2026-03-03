@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Ranking dos Professores</h2>
+
+{% for user in ranking %}
+<div class="ranking-item">
+    {{ loop.index }}º - {{ user[0] }} ⭐ {{ "%.1f"|format(user[1]) }}
+</div>
+{% endfor %}
+
+{% endblock %}
