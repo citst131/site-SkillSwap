@@ -1,0 +1,132 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 40px;
+    color: #333;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* HEADER */
+header {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #667eea;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* TITLES */
+h2 {
+    margin-bottom: 20px;
+}
+
+/* FORM */
+form {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    max-width: 500px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+button {
+    background: #667eea;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+/* VIDEO */
+video {
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* RATING */
+.rating a {
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+/* RANKING */
+.ranking-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CREDITOS */
+.creditos {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: inline-block;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
